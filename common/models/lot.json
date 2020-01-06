@@ -1,0 +1,32 @@
+{
+  "name": "lot",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "designation": {
+      "type": "string",
+      "required": true
+    },
+    "commentaire": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "lotTache": {
+      "type": "hasMany",
+      "model": "tache",
+      "foreignKey": ""
+    },
+    "lotProjet": {
+      "type": "belongsTo",
+      "model": "projet",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

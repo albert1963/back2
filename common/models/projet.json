@@ -1,0 +1,39 @@
+{
+  "name": "projet",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "designation": {
+      "type": "string"
+    },
+    "budgetDebut": {
+      "type": "date",
+      "required": true
+    },
+    "budgetFin": {
+      "type": "date",
+      "required": true
+    },
+    "commentaire": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "lots": {
+      "type": "hasMany",
+      "model": "lot",
+      "foreignKey": ""
+    },
+    "taches": {
+      "type": "hasMany",
+      "model": "tache",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

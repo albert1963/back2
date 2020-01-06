@@ -1,0 +1,34 @@
+{
+  "name": "feuille",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "jour": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "feuilleUti": {
+      "type": "belongsTo",
+      "model": "utilisateur",
+      "foreignKey": ""
+    },
+    "utilisateur": {
+      "type": "belongsTo",
+      "model": "utilisateur",
+      "foreignKey": ""
+    },
+    "feuiTache": {
+      "type": "hasMany",
+      "model": "tache",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

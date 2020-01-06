@@ -1,0 +1,32 @@
+{
+  "name": "utilisateur",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "derniereConnexion": {
+      "type": "date"
+    },
+    "role": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "utiEqui": {
+      "type": "hasAndBelongsToMany",
+      "model": "equipe",
+      "foreignKey": ""
+    },
+    "utiFeuille": {
+      "type": "hasMany",
+      "model": "feuille",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

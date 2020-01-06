@@ -1,0 +1,36 @@
+{
+  "name": "tache",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "designation": {
+      "type": "string"
+    },
+    "commentaire": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "utiFeuille": {
+      "type": "belongsTo",
+      "model": "utilisateur",
+      "foreignKey": ""
+    },
+    "tacheLot": {
+      "type": "belongsTo",
+      "model": "lot",
+      "foreignKey": ""
+    },
+    "tacheProjet": {
+      "type": "belongsTo",
+      "model": "projet",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

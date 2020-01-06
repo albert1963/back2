@@ -1,0 +1,27 @@
+{
+  "name": "equipe",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "designation": {
+      "type": "string",
+      "required": true
+    },
+    "detail": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "eqUser": {
+      "type": "hasMany",
+      "model": "utilisateur",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
